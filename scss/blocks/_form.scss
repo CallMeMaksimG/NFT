@@ -1,0 +1,116 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    height: 52px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: $text-dark;
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 21.78px;
+
+    &::placeholder {
+        color: rgba(117, 117, 117, 1);
+    }
+
+    @media (max-width: 430px) {
+        height: 49px;
+        font-size: 16px;
+        line-height: 19.36px;
+        text-align: left;
+    }
+}
+
+.form__btn {
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background: $gradient-green;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: $text-dark;
+    transition: all 0.2s ease-in;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    &::after {
+        width: 100%;
+        height: 52px;
+        background: $gradient-green;
+        content: '';
+        filter: blur(7px);
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.3s ease-in;
+        @media (max-width: 430px) {
+            height: 49px;
+        }
+    }
+    &:disabled {
+        color: rgba(36, 36, 36, 0.5);
+        &::after {
+            width: 100%;
+            height: 52px;
+            background: $gradient-green;
+            content: '';
+            filter: blur(0px);
+            position: absolute;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @media (max-width: 430px) {
+                height: 49px;
+            }
+        }
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+            height: 52px;
+            background: $gradient-green;
+            content: '';
+            filter: blur(12px);
+            position: absolute;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @media (max-width: 430px) {
+                height: 49px;
+            }
+        }
+    }
+
+    &:active {
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    @media (max-width: 430px) {
+        height: 49px;
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+}

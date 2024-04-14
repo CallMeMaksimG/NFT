@@ -1,0 +1,10 @@
+.logo-mobile {
+    position: absolute;
+    top: 34px;
+    display: none;
+
+    @media(max-width: 900px) {
+        display: block;
+        width: 89px;
+    }
+}

@@ -1,0 +1,27 @@
+.account {
+    margin-left: auto;
+}
+
+.account__btn {
+    color: $text-muted;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    padding: 16px 22px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 15px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        color: rgba(195, 243, 59, 1);
+        border: 1px solid rgba(195, 243, 59, 1);
+    }
+
+    &:active {
+        background: rgba(224, 255, 172, 0.05);
+    }
+
+    @media (max-width: 900px) {
+       margin-top: 90px;
+    }
+}
