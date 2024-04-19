@@ -5,6 +5,7 @@ const blur = document.querySelector('.blur');
 const mobileMenu = document.querySelector('.nav-list');
 const navLogo = document.querySelector('.nav__logo');
 const body = document.querySelector('.body');
+const listItems = document.querySelectorAll('.nav-list__item');
 
 const burgerBtn = document.querySelector('.burger-btn');
 
@@ -27,4 +28,15 @@ burgerBtn.addEventListener('click', () => {
     navLogo.classList.toggle('nav__logo--hidden');
     blur.classList.toggle('blur--open');
     body.classList.toggle('body--no-scroll');
+});
+
+listItems.forEach((listItem) => {
+    listItem.addEventListener('click', () => {
+        const burgerIcon = document.querySelector('.burger-icon');
+        burgerIcon.classList.toggle('burger-icon--active');
+        mobileMenu.classList.toggle('nav-list--active');
+        navLogo.classList.toggle('nav__logo--hidden');
+        blur.classList.toggle('blur--open');
+        body.classList.toggle('body--no-scroll');
+    });
 });
